@@ -219,7 +219,7 @@ class hospitalsys{
         try {
             Connection con = DBConnection.getConnection();
             if(con == null){
-            System.out.println("Database not connected ❌");
+            System.out.println("Database not connected");
             return;
             }
 
@@ -232,11 +232,11 @@ class hospitalsys{
             ResultSet rs = pst.executeQuery();
 
             if(rs.next()){
-                System.out.println("Login Success ✅");
+                System.out.println("Login Success");
                 new HR();
                 frame.dispose();
             } else {
-                System.out.println("Invalid ID or Password ❌");
+                System.out.println("Invalid ID or Password");
             }
             rs.close();
             pst.close();
